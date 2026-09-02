@@ -1,0 +1,13 @@
+# Configuração do verificador de links (https://github.com/lycheeverse/lychee)
+# Uso: lychee --no-progress './**/*.md'
+#
+# User-Agent de navegador comum: a UA padrão do lychee é bloqueada (403) por
+# developer.arm.com e intel.com, mas essas páginas respondem 200 normalmente
+# com uma UA de curl/navegador (verificado manualmente com curl nesta sessão).
+user_agent = "curl/8.7.1"
+
+# O LinkedIn responde HTTP 999 a qualquer verificador automatizado (bloqueio anti-bot),
+# mesmo com o perfil no ar. flatassembler.net falha o handshake TLS especificamente
+# no cliente HTTP do lychee (rustls), embora responda 200 normalmente via curl —
+# verificado manualmente nesta sessão. Ambos excluídos apenas da checagem automatizada.
+exclude = ["^https://www\\.linkedin\\.com/", "^https://flatassembler\\.net/"]
