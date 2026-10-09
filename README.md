@@ -201,6 +201,7 @@ Assembly é justamente o tipo de código onde a IA generativa erra bastante — 
 **Para trabalhar**
 - [Gepetto](https://github.com/JusticeRage/Gepetto) — Plugin para IDA Pro que usa modelos de linguagem para sugerir nomes de função e comentários a partir do assembly desassemblado.
 - [GitHub Copilot](https://github.com/features/copilot), [Cursor](https://cursor.com/) e [Claude Code](https://code.claude.com/docs/en/overview) ajudam a escrever rotinas em assembly, gerar testes para código de baixo nível e explicar mensagens de erro do assembler ou do linker.
+- [REA](https://github.com/morluto/rea) — CLI e servidor MCP locais para agentes investigarem assembly e funções de programas com evidências e limitações explícitas; análise nativa aprofundada exige Hopper, Ghidra ou IDA instalados separadamente. Código aberto MIT, documentação em inglês.
 - Depois de qualquer sugestão da IA envolvendo assembly, **monte e rode**: se o código não monta com `nasm`/`as` ou se o comportamento não bate no depurador, a sugestão está errada — não existe "quase certo" em assembly.
 
 **Limites e boas práticas**
